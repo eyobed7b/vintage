@@ -1,0 +1,53 @@
+/backend/node_modules
+# /backend/.env
+/backend/uploads
+/backend/images
+
+# Miscellaneous
+/vintage/*.class
+/vintage/*.log
+/vintage/*.pyc
+/vintage/*.swp
+/vintage/.DS_Store
+/vintage/.atom/
+/vintage/.buildlog/
+/vintage/.history
+/vintage/.svn/
+
+# IntelliJ related
+/vintage/*.iml
+/vintage/*.ipr
+/vintage/*.iws
+/vintage/.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+/vintage/**/doc/api/
+/vintage/**/ios/Flutter/.last_build_id
+/vintage/.dart_tool/
+/vintage/.flutter-plugins
+/vintage/.flutter-plugins-dependencies
+/vintage/.packages
+/vintage/.pub-cache/
+/vintage/.pub/
+/vintage/build/
+
+# Web related
+/vintage/lib/generated_plugin_registrant.dart
+
+# Symbolication related
+/vintage/app.*.symbols
+
+# Obfuscation related
+/vintage/app.*.map.json
+
+# Exceptions to above rules.
+!/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
+
+
+
+ 
