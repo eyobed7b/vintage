@@ -226,9 +226,14 @@ class ResetPasswordState extends State<ResetPassword> {
 
   Future<void> resetPassword(email) async {
     try {
-      await FirebaseAuth.instance.sendPasswordResetEmail(email: email).then(
-          (value) =>
-              _displaySnackBar(context, "resting email sent to ${email}"));
+      await FirebaseAuth.instance
+          .sendPasswordResetEmail(email: email)
+          .then((value) {
+        _displaySnackBar(context, "resting email sent to ${email}");
+         setState(() {
+             loading = false;
+         });
+      });
     } catch (err) {
       print(err.message);
       setState(() {
@@ -245,12 +250,12 @@ class ResetPasswordState extends State<ResetPassword> {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
       onPressed: () async {
         if (_key.currentState.validate()) {
-          // setState(() {
-          //   loading = true;
-          //   err_message = null;
-          //   email = emailController.text;
-          // });
-          // resetPassword(email);
+          setState(() {
+            loading = true;
+            err_message = null;
+            email = emailController.text;
+          });
+          resetPassword(email);
         }
       },
       textColor: Colors.white,
