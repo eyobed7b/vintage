@@ -46,6 +46,21 @@
 /vintage/app.*.map.json
 
 # Exceptions to above rules.
+
+
+/laravel_backend/node_modules
+/laravel_backend/public/hot
+/laravel_backend/public/storage
+/laravel_backend/storage/*.key
+/laravel_backend/vendor
+/laravel_backend.env
+/laravel_backend.env.backup
+/laravel_backend.phpunit.result.cache
+/laravel_backendHomestead.json
+/laravel_backendHomestead.yaml
+/laravel_backendnpm-debug.log
+/laravel_backendyarn-error.log
+
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 
 
