@@ -30,7 +30,8 @@ class navigationDrawerState extends State<navigationDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-        child: SafeArea(
+        child: widget.user==null?Center(child: CircularProgressIndicator(),):
+        SafeArea(
             child: Stack(
       children: <Widget>[
         Container(
